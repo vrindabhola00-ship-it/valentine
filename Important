@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vrinda ❤️ Mayank</title>
+
+<style>
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  margin-top: 40px;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  margin: 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: hotpink;
+  color: white;
+}
+
+.heart {
+  position: fixed;
+  top: -10px;
+  font-size: 20px;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h1>27 July 2025 💖<br>The Best Day Of Life</h1>
+
+<h2 id="timeTogether"></h2>
+
+<div class="message">
+I love you more than anyone ❤️<br>
+You are my life 🌎<br><br>
+
+When I see you, I feel something I cannot explain… 🥺<br><br>
+
+Haan main jaldi naraz ho jaati hoon 😌  
+Par tum mujhe mana lete ho…  
+Aur jab tum mujhe “Laddi ji” kehte ho  
+That was the most adorable moment ever 💕<br><br>
+
+<b>#Vriyank ❤️🌎</b>
+</div>
+
+<button onclick="alert('Always & Forever 💖')">Forever With You 💘</button>
+
+<script>
+// Time calculation from 27 July 2025
+const startDate = new Date("July 27, 2025 00:00:00");
+const now = new Date();
+
+const diff = now - startDate;
+
+const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+document.getElementById("timeTogether").innerHTML =
+  "We have spent " + days + " days, " + hours + " hours and " + minutes + " minutes together 💖";
+
+// Floating hearts
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}, 600);
+</script>
+
+</body>
+</html>
